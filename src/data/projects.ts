@@ -60,19 +60,19 @@ export const projects: Record<ProjectKey, Project> = {
   },
   labeling: {
     number: '02',
-    title: 'Multimodal AI pipelines',
+    title: 'RAG & LLM/VLM pipelines',
     kind: 'Professional case study',
     anchor: 'case-labeling',
-    overview: 'Retrieval-augmented generation (RAG) supplies labeled examples to a task-adapted vision-language model (VLM) for auto-labeling. This multimodal AI pipeline connects retrieval, model inference, and structured outputs.',
-    decisions: 'RAG retrieves relevant labeled examples as context for the VLM. LoRA adaptation happens offline; it is not repeated for each labeling request. At request time, the adapted model generates label proposals that are decoded into a structured form.',
-    evidence: 'Professional multimodal-labeling work at Bosch, described at a high level. Employer models, datasets, and implementation remain private.',
+    overview: 'A retrieval-augmented multimodal AI pipeline that connects context retrieval, VLM inference, and structured outputs. At Bosch, I applied this workflow to image auto-labeling.',
+    decisions: 'RAG retrieves relevant examples as context for the VLM. LoRA adaptation happens offline, separately from each request. At request time, the adapted model generates proposals that are decoded into a structured form.',
+    evidence: 'Professional multimodal AI work at Bosch, described at a high level. The application was image auto-labeling. Employer models, datasets, and implementation remain private.',
     stages: [
-      ['Images', 'Task + views', 'Images and a task instruction define the labeling request. The inputs must match the task and the adapted model\'s expected visual representation.'],
+      ['Images', 'Task + views', 'Images and a task instruction define the request. The inputs must match the task and the adapted model\'s expected visual representation.'],
       ['RAG', 'Retrieve context', 'Embedding-based retrieval selects relevant labeled examples as context for the current request. This is the retrieval step in the RAG pipeline; selecting examples is distinct from updating the VLM\'s parameters.'],
-      ['VLM', 'Adapted model', 'The vision-language model uses the visual input, instruction, and retrieved context to predict label information. Its task adaptation was performed beforehand.'],
-      ['Labels', 'Decode outputs', 'Model responses are decoded into structured label proposals. Postprocessing interprets the predicted attributes and combines outputs where the labeling task requires it.']
+      ['VLM', 'Adapted model', 'The vision-language model uses the visual input, instruction, and retrieved context to generate a task-specific response. Its task adaptation was performed beforehand.'],
+      ['Outputs', 'Structured data', 'Model responses are decoded into structured proposals. In the auto-labeling application, these proposals describe image attributes for review.']
     ],
-    contextNote: 'RAG provides labeled context at request time. LoRA adapts the VLM offline. The pipeline generates structured label proposals for review.'
+    contextNote: 'RAG supplies context at request time. LoRA adapts the VLM offline. Structured model outputs are prepared for review.'
   },
   pipelines: {
     number: '03',
@@ -126,7 +126,7 @@ export const projects: Record<ProjectKey, Project> = {
 
 export const workflowChoices: { key: ProjectKey; category: string; title: string[] }[] = [
   { key: 'perception', category: 'Autonomous driving', title: ['Static object detection', '& ML pipelines'] },
-  { key: 'labeling', category: 'Multimodal AI', title: ['RAG & VLM labeling'] },
+  { key: 'labeling', category: 'Multimodal AI', title: ['RAG & LLM/VLM', 'pipelines'] },
   { key: 'pipelines', category: 'ML infrastructure', title: ['ML data pipelines'] },
   { key: 'documents', category: 'LLM & agentic AI', title: ['Agentic document', 'comparison'] },
   { key: 'agents', category: 'Agentic systems', title: ['Agent evaluation', '& recovery'] },

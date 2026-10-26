@@ -27,8 +27,8 @@ export const professionalWork: ProfessionalWork[] = [
   {
     "id": "case-labeling",
     "category": "Bosch · Full-time experience",
-    "title": "Multimodal AI pipelines",
-    "summary": "I worked on a retrieval-augmented generation (RAG) pipeline for VLM auto-labeling. Retrieved examples provide context to a vision-language model, which generates structured label proposals from images and task instructions.",
+    "title": "RAG & LLM/VLM pipelines",
+    "summary": "I connected retrieval, VLM inference, and structured outputs in a multimodal AI pipeline. At Bosch, I applied it to auto-labeling, using relevant examples and task instructions to generate label proposals from images.",
     "tags": [
       "Multimodal AI",
       "RAG",
@@ -36,7 +36,7 @@ export const professionalWork: ProfessionalWork[] = [
       "LoRA"
     ],
     "detailTitle": "Adaptation and inference",
-    "detail": "LoRA adapts the model during preparation. The adapted model generates proposals during inference; fine-tuning is separate from each labeling request."
+    "detail": "LoRA adapts the model during preparation. The adapted model generates structured proposals at request time; adaptation happens separately from inference."
   },
   {
     "id": "case-pipelines",

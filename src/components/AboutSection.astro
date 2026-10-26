@@ -1,0 +1,40 @@
+---
+import { about, recommendations } from '../data/about';
+import { profile } from '../data/profile';
+import '../styles/about.css';
+---
+<section class="about-section page-width" id="about" aria-labelledby="about-heading">
+  <div class="about-introduction">
+    <div class="about-copy">
+      <p class="eyebrow">About me</p>
+      <h2 id="about-heading">From Bosch<br />to USC<span>.</span></h2>
+      <p>{about.introduction}</p>
+      <p>{about.approach}</p>
+      <a class="text-link" href="#background">Experience & education <span aria-hidden="true">↗</span></a>
+    </div>
+    <dl class="experience-summary" aria-label="Bosch experience">
+      {about.experience.map(item => <div>
+        <dt>{item.label}</dt>
+        <dd>{item.value}<span>{item.detail}</span></dd>
+      </div>)}
+    </dl>
+  </div>
+  <div class="recommendations" id="recommendations" aria-labelledby="recommendations-heading">
+    <div class="recommendations-heading">
+      <div><p class="eyebrow">Recommendations</p><h3 id="recommendations-heading">From my manager and mentor.</h3></div>
+      <a class="text-link" href={profile.linkedin}>Read on LinkedIn <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="recommendation-grid">
+      {recommendations.map(item => <figure class="recommendation-card">
+        <span class="recommendation-relationship">{item.relationship}</span>
+        <blockquote><p>"{item.quote}"</p></blockquote>
+        <figcaption>
+          <span class="recommendation-name">{item.name}</span>
+          <span class="recommendation-role">{item.role}</span>
+          <span class="recommendation-source">LinkedIn recommendation · <time datetime={item.dateTime}>{item.date}</time></span>
+        </figcaption>
+      </figure>)}
+    </div>
+    <p class="recommendations-note">Excerpts from recommendations received on LinkedIn.</p>
+  </div>
+</section>

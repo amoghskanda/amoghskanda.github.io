@@ -1,10 +1,12 @@
 import { profile, emailHref, resumeRequestHref } from '../data/profile';
 
 const commands = [
+  ['About Amogh · Bosch experience · USC', '#about', 'About'],
+  ['Recommendations · manager and mentor · LinkedIn', '#recommendations', 'About'],
   ['Selected engineering work', '#work', 'Section'],
   ['Five interactive workflows', '#workflows', 'Explore'],
   ['Static object detection & ML pipelines', '#case-perception', 'Case study'],
-  ['RAG & VLM labeling', '#case-labeling', 'Case study'],
+  ['RAG & LLM/VLM pipelines', '#case-labeling', 'Case study'],
   ['ML data pipelines', '#case-pipelines', 'Case study'],
   ['Agentic document comparison · LangGraph · LLMs · FastAPI', '#case-agentic', 'Case study'],
   ['AI toolkit · LLM / VLM · RAG · LangGraph · LangChain', '#main', 'Toolkit'],
