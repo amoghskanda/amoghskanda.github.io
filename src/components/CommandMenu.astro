@@ -1,0 +1,10 @@
+<dialog class="command-dialog" id="command-dialog" aria-labelledby="command-title">
+  <div class="command-dialog-head"><h2 id="command-title">Jump to</h2><button type="button" data-close-command aria-label="Close navigation">Esc</button></div>
+  <label class="visually-hidden" for="command-search">Find a section or contact link</label><input id="command-search" type="search" placeholder="Work, projects, contact…" autocomplete="off" />
+  <div class="command-results" data-command-results></div><p>Use Tab to choose a result. Enter to open.</p>
+</dialog>
+<script>
+  import { initNavigation } from '../scripts/navigation';
+  const dialog = document.querySelector<HTMLDialogElement>('#command-dialog');
+  if (dialog) initNavigation(dialog);
+</script>

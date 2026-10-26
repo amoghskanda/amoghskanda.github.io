@@ -1,0 +1,7 @@
+---
+import { publicWork } from '../data/content';
+---
+<section class="public-section page-width" id="public-work">
+  <div class="section-heading"><div><p class="eyebrow">05 / Public projects & research</p><h2>Open to inspection<span>.</span></h2></div></div>
+  <div class="public-grid">{publicWork.map(item => <article><span class="eyebrow">{item.category}</span><h3>{item.title}</h3><p>{item.summary}</p><p class="small-note">{item.note}</p><a href={item.url} class="text-link">{item.linkLabel}<span aria-hidden="true">↗</span></a></article>)}</div>
+</section>

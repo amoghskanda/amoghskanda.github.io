@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f3f1eb"/>
+  <rect x="32" y="32" width="1136" height="566" rx="18" fill="none" stroke="#d4dbd1"/>
+  <text x="72" y="112" fill="#52665b" font-family="Arial,sans-serif" font-size="17" letter-spacing="2">MACHINE LEARNING ENGINEER · USC</text>
+  <text x="66" y="243" fill="#17211f" font-family="Arial,sans-serif" font-weight="600" font-size="108" letter-spacing="-6">Amogh</text>
+  <text x="66" y="348" fill="#17211f" font-family="Arial,sans-serif" font-weight="600" font-size="92" letter-spacing="-5">Skanda Suresh<tspan fill="#315fdf">.</tspan></text>
+  <text x="72" y="414" fill="#40564a" font-family="Arial,sans-serif" font-size="24">ML models. Multimodal AI. Agentic pipelines.</text>
+  <text x="72" y="475" fill="#6b706f" font-family="Arial,sans-serif" font-size="18">Summer 2027 internships · Los Angeles</text>
+  <text x="72" y="543" fill="#17211f" font-family="Arial,sans-serif" font-size="18">amoghskanda.github.io</text>
+  <rect x="790" y="102" width="336" height="436" rx="16" fill="#17211f"/>
+  <text x="821" y="151" fill="#9db7a5" font-family="Arial,sans-serif" font-size="13" letter-spacing="1.5">EXPLORE THE ENGINEERING</text>
+  <path d="M958 246v40m0 70v40" fill="none" stroke="#62806b" stroke-width="2"/>
+  <rect x="846" y="188" width="224" height="58" rx="6" fill="#b1ebc7"/>
+  <text x="958" y="224" text-anchor="middle" fill="#173722" font-family="Arial,sans-serif" font-size="20">RAG &amp; VLM pipelines</text>
+  <rect x="846" y="286" width="224" height="70" rx="6" fill="#213b2a" stroke="#60806a"/>
+  <text x="958" y="316" text-anchor="middle" fill="#c6ddcd" font-family="Arial,sans-serif" font-size="18">LangGraph</text>
+  <text x="958" y="339" text-anchor="middle" fill="#8ca996" font-family="Arial,sans-serif" font-size="13">Document comparison</text>
+  <rect x="846" y="396" width="224" height="70" rx="6" fill="#213b2a" stroke="#60806a"/>
+  <text x="958" y="426" text-anchor="middle" fill="#c6ddcd" font-family="Arial,sans-serif" font-size="18">Agent evaluation</text>
+  <text x="958" y="449" text-anchor="middle" fill="#8ca996" font-family="Arial,sans-serif" font-size="13">Research &amp; design</text>
+</svg>

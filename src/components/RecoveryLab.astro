@@ -1,0 +1,33 @@
+---
+import { recoveryFixtures, makeTrace } from '../data/recovery';
+import '../styles/recovery.css';
+const trace = makeTrace();
+const first = trace.events[0]!;
+---
+<section class="lab-section" id="lab">
+  <div class="page-width">
+    <div class="section-heading"><div><p class="eyebrow">04 / Building now</p><h2>Agent recovery lab<span>.</span></h2></div><span class="status-label lab-status">Research & design</span></div>
+    <div class="lab-intro"><p>An agent writes through a tool. The response times out. Did the write happen?</p><div><p>I'm exploring evaluation and recovery for agentic pipelines when a tool write has an uncertain result. The first design question is when to retry, inspect state, or stop for review.</p></div></div>
+    <div class="lab-mount" data-recovery-lab data-mounted="true">
+      <div class="recovery-caption"><span class="recovery-dot"></span>Illustrative replay · synthetic fixtures · no model inference</div>
+      <div class="recovery-controls">
+        <label class="recovery-select">Inject a fault<select aria-label="Fault scenario">{Object.entries(recoveryFixtures).map(([key, fixture]) => <option value={key}>{fixture.title}</option>)}</select></label>
+        <fieldset class="recovery-policies"><legend>Recovery policy</legend><label><input type="radio" name="recovery-policy" value="naive" />Naive</label><label><input type="radio" name="recovery-policy" value="guarded" checked />Checked recovery</label></fieldset>
+      </div>
+      <p class="recovery-description">{recoveryFixtures['lost-ack'].description}</p>
+      <div class="recovery-phases" aria-label="Trace phases">{['observe', 'act', 'verify', 'recover'].map((phase, index) => <span data-phase={phase} class:list={{ 'is-active': index === 0 }} aria-current={index === 0 ? 'step' : undefined}><b>0{index + 1}</b>{phase}</span>)}</div>
+      <div class="recovery-toolbar"><button type="button" class="recovery-play">Replay fixture <span aria-hidden="true">↗</span></button><button type="button" class="recovery-step">Next step</button><button type="button" class="recovery-reset">Reset</button><span class="recovery-counter" aria-live="polite">1 / {trace.events.length} events</span></div>
+      <div class="recovery-events" aria-label="Synthetic event trace"><div class="recovery-event is-neutral"><span class="recovery-event-index">01</span><div><strong>{first.title}</strong><p>{first.detail}</p></div><span class="recovery-event-kind">event</span></div></div>
+      <p class="recovery-announcement" role="status" aria-live="polite"></p>
+      <div class="recovery-result" aria-live="polite"><div class="recovery-pending">State at this step<span>0 effects recorded</span></div></div>
+      <div class="recovery-footer"><span>Inspect the resulting state, not the agent's claim.</span><button type="button" class="recovery-export">Export fixture JSON ↓</button></div>
+      <noscript><div class="recovery-static"><h3>Lost acknowledgement, checked recovery</h3><ol>{trace.events.map(event => <li><strong>{event.title}</strong><p>{event.detail}</p></li>)}</ol><p>Enable JavaScript to choose other fixtures and policies, step through events, and export traces.</p></div></noscript>
+    </div>
+    <p class="small-note lab-disclaimer">VLA evaluation is a future adapter idea for this research.</p>
+  </div>
+</section>
+<script>
+  import { initRecoveryLab } from '../scripts/recovery';
+  const root = document.querySelector<HTMLElement>('[data-recovery-lab]');
+  if (root) initRecoveryLab(root);
+</script>

@@ -1,0 +1,8 @@
+.scratch/
+.DS_Store
+node_modules/
+.astro/
+dist/
+.env
+.env.*
+prototypes/

@@ -1,0 +1,9 @@
+---
+import { trackerProject } from '../data/content';
+---
+<section class="building-section page-width" id="building">
+  <div class="section-heading"><div><p class="eyebrow">03 / Side project</p><h2>A problem I have.<br />A tool I'm building.</h2></div><span class="status-label"><span aria-hidden="true"></span>In progress</span></div>
+  <div class="tracker-feature"><div><h3>{trackerProject.title[0]}<br />{trackerProject.title[1]}</h3><p>{trackerProject.summary}</p><p>{trackerProject.implementation}</p><div class="tag-row">{trackerProject.tags.map(tag => <span>{tag}</span>)}</div><p class="small-note">{trackerProject.status}</p></div>
+    <div class="tracker-pipeline" aria-label="Internship tracker workflow">{trackerProject.stages.map(([title, detail], index) => <Fragment>{index > 0 && <span class="flow-connector" aria-hidden="true">↓</span>}<div><span>{String(index + 1).padStart(2, '0')}</span><strong>{title}</strong><small>{detail}</small></div></Fragment>)}</div>
+  </div>
+</section>

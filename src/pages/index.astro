@@ -1,0 +1,18 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Header from '../components/Header.astro';
+import HeroWorkbench from '../components/HeroWorkbench.astro';
+import WorkSection from '../components/WorkSection.astro';
+import InternshipSection from '../components/InternshipSection.astro';
+import BuildingSection from '../components/BuildingSection.astro';
+import RecoveryLab from '../components/RecoveryLab.astro';
+import PublicWork from '../components/PublicWork.astro';
+import BackgroundSection from '../components/BackgroundSection.astro';
+import ContactFooter from '../components/ContactFooter.astro';
+import CommandMenu from '../components/CommandMenu.astro';
+---
+<SiteLayout>
+  <Header />
+  <main id="main"><HeroWorkbench /><WorkSection /><InternshipSection /><BuildingSection /><RecoveryLab /><PublicWork /><BackgroundSection /><ContactFooter /></main>
+  <CommandMenu />
+</SiteLayout>

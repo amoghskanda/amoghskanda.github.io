@@ -1,0 +1,13 @@
+---
+import { professionalWork } from '../data/content';
+---
+<section class="work-section page-width" id="work">
+  <div class="experience-jump" aria-label="Experience sections"><a href="#work" aria-current="location">Full-time experience</a><a href="#internships">Internship experience <span aria-hidden="true">↓</span></a></div>
+  <div class="section-heading"><div><p class="eyebrow">01 / Bosch · Machine Learning Engineer · Aug 2024 to Jul 2026</p><h2>Inside the work<span>.</span></h2></div><p>Applied ML, LLM/VLM pipelines,<br />and data engineering.</p></div>
+  <p class="work-overview">My work includes computer vision, RAG-based VLM labeling, LangGraph document-review pipelines, and ML data engineering. I am now exploring evaluation and recovery for tool-using AI agents.</p>
+  <div class="case-list">{professionalWork.map((item, index) => <article class="case-study" id={item.id}>
+    <div class="case-index">{String(index + 1).padStart(2, '0')}</div>
+    <div class="case-main"><p class="case-meta">{item.category}</p><h3>{item.title}</h3><p>{item.summary}</p><div class="tag-row">{item.tags.map(tag => <span>{tag}</span>)}</div></div>
+    <div class="case-detail"><h4>{item.detailTitle}</h4><p>{item.detail}</p>{item.note && <p class="case-note">{item.note}</p>}</div>
+  </article>)}</div>
+</section>

@@ -1,0 +1,4 @@
+---
+import { background } from '../data/content';
+---
+<section class="background-section page-width" id="background"><div><p class="eyebrow">06 / Background</p><h2>Experience & education.</h2><p>{background.summary}</p><p>{background.availability}</p></div><div class="timeline">{background.timeline.map(item => <div><span class="timeline-date">{item.dates}</span><h3>{item.institution}</h3><p>{item.description}</p></div>)}</div></section>
