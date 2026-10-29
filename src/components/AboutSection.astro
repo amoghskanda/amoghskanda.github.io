@@ -27,14 +27,14 @@ import '../styles/about.css';
     <div class="recommendation-grid">
       {recommendations.map(item => <figure class="recommendation-card">
         <span class="recommendation-relationship">{item.relationship}</span>
-        <blockquote><p>"{item.quote}"</p></blockquote>
+        <blockquote><p>{item.quote}</p></blockquote>
         <figcaption>
-          <span class="recommendation-name">{item.name}</span>
+          {item.profileUrl ? <a class="recommendation-name" href={item.profileUrl}>{item.name} <span aria-hidden="true">↗</span></a> : <span class="recommendation-name">{item.name}</span>}
           <span class="recommendation-role">{item.role}</span>
           <span class="recommendation-source">LinkedIn recommendation · <time datetime={item.dateTime}>{item.date}</time></span>
         </figcaption>
       </figure>)}
     </div>
-    <p class="recommendations-note">Excerpts from recommendations received on LinkedIn.</p>
+    <p class="recommendations-note">Full recommendations received on LinkedIn.</p>
   </div>
 </section>

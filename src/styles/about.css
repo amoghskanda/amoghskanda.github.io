@@ -130,13 +130,24 @@
   letter-spacing: -.02em;
 }
 
-.recommendation-card figcaption > span {
+.recommendation-card figcaption > span,
+.recommendation-card figcaption > a {
   display: block;
 }
 
 .recommendation-name {
   font-size: 13px;
   font-weight: 600;
+}
+
+a.recommendation-name {
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 4px;
+}
+
+a.recommendation-name:hover {
+  text-decoration-color: currentColor;
 }
 
 .recommendation-role {
