@@ -1,4 +1,4 @@
-import { profile, emailHref, resumeRequestHref } from '../data/profile';
+import { profile, emailHref } from '../data/profile';
 
 const commands = [
   ['About Amogh · Bosch experience · USC', '#about', 'About'],
@@ -9,14 +9,13 @@ const commands = [
   ['RAG & LLM/VLM pipelines', '#case-labeling', 'Case study'],
   ['ML data pipelines', '#case-pipelines', 'Case study'],
   ['Agentic document comparison · LangGraph · LLMs · FastAPI', '#case-agentic', 'Case study'],
-  ['AI toolkit · LLM / VLM · RAG · LangGraph · LangChain', '#main', 'Toolkit'],
+  [`Technical toolkit · ${profile.toolkit.join(' · ')}`, '#main', 'Toolkit'],
   ['Internship experience', '#internships', 'Experience'],
   ['Internship tracker', '#building', 'Side project'],
   ['Agent recovery lab', '#lab', 'Building now'],
   ['Public projects & publication', '#public-work', 'Source'],
   ['Background & education', '#background', 'About'],
   ['Email Amogh', emailHref, 'Contact'],
-  ['Request resume', resumeRequestHref, 'Contact'],
   ['LinkedIn', profile.linkedin, 'Profile'],
   ['GitHub', profile.github, 'Profile'],
   ['Phone', `tel:${profile.phone}`, 'Contact'],

@@ -2164,10 +2164,14 @@ select:focus-visible,
   color:#596b62;
 }
 
-.hero-toolkit span+span:before {
-  content:"/";
+.hero-toolkit span {
+  white-space:nowrap;
+}
+
+.hero-toolkit span:not(:last-child):after {
+  content:"|";
   color:#abb4aa;
-  margin-right:16px;
+  margin-left:16px;
 }
 
 .workflow-rail-heading {
@@ -2225,8 +2229,8 @@ select:focus-visible,
     max-width:330px;
   }
 
-  .hero-toolkit span+span:before {
-    margin-right:12px;
+  .hero-toolkit span:not(:last-child):after {
+    margin-left:12px;
   }
 
   .project-rail {

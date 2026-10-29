@@ -1,3 +1,5 @@
+import { internshipPeriod } from './internships';
+
 export interface ProfessionalWork {
   id: string;
   category: string;
@@ -135,7 +137,7 @@ export const background = {
       "description": "Machine Learning Engineer"
     },
     {
-      "dates": "Jan to Jun 2024 / Jun to Jul 2023",
+      "dates": internshipPeriod,
       "institution": "Bosch",
       "description": "Machine Learning Engineer Intern"
     },

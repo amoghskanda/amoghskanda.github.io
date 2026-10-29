@@ -13,11 +13,10 @@ export const profile = {
   location: 'Los Angeles, CA',
   availability: 'Available for Summer 2027 internships',
   graduation: 'Expected graduation · May 2028',
-  role: 'Machine learning engineer · USC',
+  role: 'MACHINE LEARNING ENGINEER | UNIVERSITY OF SOUTHERN CALIFORNIA',
   heroStatement: ['Machine learning. Multimodal AI.', 'Agentic pipelines. Software engineering.'],
-  introduction: 'I build ML models, LLM/VLM pipelines, and the software that connects them. M.S. Computer Science at USC, previously at Bosch working across computer vision, retrieval-augmented generation, agentic AI, and data engineering.',
-  toolkit: ['LLM / VLM', 'RAG', 'LangGraph', 'LangChain'],
+  introduction: 'I build scalable ML models, multimodal AI pipelines, and the software around them. M.S. Computer Science at USC, previously at Bosch working on computer vision, autonomous driving, perception, RAG-based VLM pipelines, and agentic AI workflows.',
+  toolkit: ['Computer Vision', 'Perception', 'LLM, VLM', 'RAG', 'LangGraph', 'LangChain', 'Databricks'],
 };
 
 export const emailHref = `mailto:${profile.email}`;
-export const resumeRequestHref = `${emailHref}?subject=Resume%20request`;

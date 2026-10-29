@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <rect width="1200" height="630" fill="#f3f1eb"/>
   <rect x="32" y="32" width="1136" height="566" rx="18" fill="none" stroke="#d4dbd1"/>
-  <text x="72" y="112" fill="#52665b" font-family="Arial,sans-serif" font-size="17" letter-spacing="2">MACHINE LEARNING ENGINEER · USC</text>
+  <text x="72" y="112" fill="#52665b" font-family="Arial,sans-serif" font-size="15" letter-spacing="1.2">MACHINE LEARNING ENGINEER | UNIVERSITY OF SOUTHERN CALIFORNIA</text>
   <text x="66" y="243" fill="#17211f" font-family="Arial,sans-serif" font-weight="600" font-size="108" letter-spacing="-6">Amogh</text>
   <text x="66" y="348" fill="#17211f" font-family="Arial,sans-serif" font-weight="600" font-size="92" letter-spacing="-5">Skanda Suresh<tspan fill="#315fdf">.</tspan></text>
   <text x="72" y="406" fill="#40564a" font-family="Arial,sans-serif" font-size="24">ML models. Multimodal AI.</text>

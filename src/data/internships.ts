@@ -1,8 +1,10 @@
 import type { Stage } from './projects';
 
 export type InternshipKey = 'scene' | 'data';
+export const internshipPeriod = 'June 2023 to June 2024';
+
 export interface InternshipTopic {
-  date: string;
+  category: string;
   title: string;
   summary: string;
   contribution: string;
@@ -13,7 +15,7 @@ export interface InternshipTopic {
 
 export const internshipTopics: Record<InternshipKey, InternshipTopic> = {
   scene: {
-    date: 'Jan to Jun 2024 · Autonomous-driving ML',
+    category: 'Autonomous-driving ML',
     title: 'Neural rendering & synthetic scenes',
     summary: 'I reconstructed scenes with NeRFs, edited camera poses and actor trajectories, and explored LiDAR simulation using depth and intensity.',
     contribution: 'Pose and trajectory edits in reconstructed scenes, PyTorch-based geometry, and experiment review in TensorBoard and Weights & Biases.',
@@ -28,7 +30,7 @@ export const internshipTopics: Record<InternshipKey, InternshipTopic> = {
     ]
   },
   data: {
-    date: 'Jun to Jul 2023 · ML data & operations',
+    category: 'ML data & operations',
     title: 'Dataset tooling & ML operations',
     summary: 'I built Python workflows to ingest and transform annotated datasets, then inspect samples and labels in FiftyOne by Voxel51.',
     contribution: 'Data ingestion, transformation, and visualization for annotated driving datasets. I also connected Azure ML pipeline events to Microsoft Teams through webhooks.',

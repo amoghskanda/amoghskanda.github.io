@@ -3,7 +3,7 @@ export const about = {
   approach: 'My work spans model development, retrieval, agent orchestration, Python APIs, and SQL/Spark data workflows. I enjoy connecting the model with the software and data it needs to work in practice.',
   experience: [
     { value: '2 years', label: 'Full-time at Bosch', detail: 'Machine Learning Engineer · Aug 2024 to Jul 2026' },
-    { value: '8 months', label: 'Bosch internships', detail: 'Two ML engineering placements · 2023 & 2024' },
+    { value: '8 months', label: 'Bosch internships', detail: 'Neural rendering & dataset tooling' },
   ],
 };
 

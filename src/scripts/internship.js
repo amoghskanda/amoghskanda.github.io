@@ -49,7 +49,7 @@ export function initInternship(root) {
       tab.tabIndex = active ? 0 : -1;
     });
     root.querySelector('[role="tabpanel"]').setAttribute('aria-labelledby', key === 'scene' ? 'intern-scene-tab' : 'intern-data-tab');
-    for (const field of ['date', 'title', 'summary', 'contribution']) root.querySelector(`[data-internship-${field}]`).textContent = topic[field];
+    for (const field of ['category', 'title', 'summary', 'contribution']) root.querySelector(`[data-internship-${field}]`).textContent = topic[field];
     root.querySelector('[data-internship-side-note]').textContent = topic.note;
     root.querySelector('[data-internship-tags]').innerHTML = topic.tags.map(tag => `<span>${tag}</span>`).join('');
     root.querySelector('[data-internship-scene]').hidden = key !== 'scene';
