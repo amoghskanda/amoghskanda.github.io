@@ -1,6 +1,6 @@
 export type Stage = readonly [title: string, subtitle: string, detail: string];
 export type FlowKey = 'image' | 'spatial';
-export type ProjectKey = 'perception' | 'labeling' | 'pipelines' | 'documents' | 'agents';
+export type ProjectKey = 'perception' | 'labeling' | 'pipelines' | 'documents';
 export interface Workflow {
   title: string;
   overview: string;
@@ -105,22 +105,6 @@ export const projects: Record<ProjectKey, Project> = {
       ['Change log', 'Human review', 'The workflow records detected text and visual differences so they can be inspected during document review.']
     ],
     contextNote: 'Conceptual document-review workflow: LangGraph orchestration, a FastAPI interface, multimodal LLM comparison, and a record of changes for review.'
-  },
-  agents: {
-    number: '05',
-    title: 'Agentic systems & evaluation',
-    kind: 'Research & design',
-    anchor: 'lab',
-    overview: 'Agentic pipeline research into how a tool-using AI agent should recover when a write succeeds but its acknowledgement is lost, an observation is stale, or a tool times out.',
-    decisions: 'The illustration compares a naive policy with checked recovery. A response alone does not establish the resulting state: the controller inspects recorded effects or refreshes its observation before deciding whether to retry.',
-    evidence: 'The interactive prototype replays synthetic fixtures and exports their traces. A harness connected to real models is planned; this illustration is not evidence of model performance.',
-    stages: [
-      ['Task', 'Known fixture', 'A synthetic task defines the intended effect and the state checks used to judge completion. The environment starts from a known state.'],
-      ['Fault', 'Inject failure', 'A fixture introduces a lost acknowledgement, a stale observation, or a timeout. The event trace makes the injected condition explicit.'],
-      ['State check', 'Inspect effects', 'The checked policy examines whether the operation committed and whether its observation is current. It then reuses a result, refreshes state, or permits a bounded retry.'],
-      ['Report', 'Trace + checks', 'The replay compares completion, recorded effects, and observation freshness. Its synthetic trace can be exported for inspection without claiming a real-model evaluation.']
-    ],
-    contextNote: 'Concept illustration only: all events are synthetic fixtures. No model inference, external tool writes, or deployed agent runs occur here. Real-model evaluation and any later VLA adapter are planned work.'
   }
 };
 
@@ -129,7 +113,6 @@ export const workflowChoices: { key: ProjectKey; category: string; title: string
   { key: 'labeling', category: 'Multimodal AI', title: ['RAG & LLM/VLM', 'pipelines'] },
   { key: 'pipelines', category: 'ML infrastructure', title: ['ML data pipelines'] },
   { key: 'documents', category: 'LLM & agentic AI', title: ['Agentic document', 'comparison'] },
-  { key: 'agents', category: 'Agentic systems', title: ['Agent evaluation', '& recovery'] },
 ];
 
 export const initialProject: ProjectKey = 'labeling';

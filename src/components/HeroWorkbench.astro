@@ -1,6 +1,7 @@
 ---
 import { profile } from '../data/profile';
 import { projects, initialProject, workflowChoices } from '../data/projects';
+import { visualOdometryProject } from '../data/content';
 import { diagramMarkup } from '../lib/workflow-diagram';
 const project = projects[initialProject];
 ---
@@ -33,11 +34,12 @@ const project = projects[initialProject];
       </div>
     </div>
   </div>
-  <div class="workflow-rail-heading page-width"><span class="eyebrow">Explore five workflows</span><span>Select a project to inspect its pipeline <span aria-hidden="true">↓</span></span></div>
-  <div class="project-rail page-width" id="workflows" role="group" aria-label="Choose one of five workflows">
-    {workflowChoices.map(choice => <button type="button" class:list={{ active: choice.key === initialProject }} aria-pressed={choice.key === initialProject ? 'true' : 'false'} data-project={choice.key}>
+  <div class="workflow-rail-heading page-width"><span class="eyebrow">Explore workflows & projects</span><span>Inspect a workflow or open the project <span aria-hidden="true">↗</span></span></div>
+  <div class="project-rail page-width" id="workflows" role="group" aria-label="Explore workflows and projects">
+    {workflowChoices.map(choice => <button type="button" class:list={['project-choice', { active: choice.key === initialProject }]} aria-pressed={choice.key === initialProject ? 'true' : 'false'} data-project={choice.key}>
       <span>{projects[choice.key].number} / {choice.category}</span><strong>{choice.title.map((line, index) => <Fragment>{index > 0 && <br />}{line}</Fragment>)}</strong><span class="rail-arrow" aria-hidden="true">↗</span>
     </button>)}
+    <a class="project-choice project-link" href={visualOdometryProject.url}><strong>Visual Odometry</strong></a>
   </div>
 </section>
 <script>

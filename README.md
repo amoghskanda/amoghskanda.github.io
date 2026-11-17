@@ -29,7 +29,7 @@ The production preview runs at `http://127.0.0.1:4174`.
 | --- | --- |
 | Contact details and profile information | `src/data/profile.ts` |
 | About, Bosch experience summary, and LinkedIn recommendation excerpts | `src/data/about.ts` |
-| The five workflow diagrams and inspector text | `src/data/projects.ts` |
+| The four workflow diagrams and inspector text | `src/data/projects.ts` |
 | Internship workflow text | `src/data/internships.ts` |
 | Full-time case studies, tracker, public projects, education/timeline | `src/data/content.ts` |
 | Internship introduction and media captions | `src/components/InternshipSection.astro` |

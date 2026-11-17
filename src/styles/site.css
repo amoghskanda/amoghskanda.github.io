@@ -633,7 +633,7 @@ select:focus-visible,
   border-bottom:1px solid var(--line);
 }
 
-.project-rail button {
+.project-rail .project-choice {
   padding:23px 22px 25px;
   text-align:left;
   background:transparent;
@@ -644,15 +644,24 @@ select:focus-visible,
   min-height:96px;
 }
 
-.project-rail button:first-child {
+.project-rail .project-link {
+  display:flex;
+  align-items:center;
+}
+
+.project-rail .project-link strong {
+  margin-top:0;
+}
+
+.project-rail .project-choice:first-child {
   padding-left:0;
 }
 
-.project-rail button:last-child {
+.project-rail .project-choice:last-child {
   border-right:0;
 }
 
-.project-rail button:before {
+.project-rail .project-choice:before {
   content:"";
   position:absolute;
   left:0;
@@ -663,11 +672,11 @@ select:focus-visible,
   transition:right .25s var(--ease);
 }
 
-.project-rail button.active:before {
+.project-rail .project-choice.active:before {
   right:0;
 }
 
-.project-rail button>span:first-child {
+.project-rail .project-choice>span:first-child {
   font:8px var(--mono);
   color:var(--muted);
 }
@@ -689,12 +698,12 @@ select:focus-visible,
   transition:transform .2s;
 }
 
-.project-rail button.active .rail-arrow {
+.project-rail .project-choice.active .rail-arrow {
   color:var(--accent);
   transform:translate(2px,-2px);
 }
 
-.project-rail button:hover {
+.project-rail .project-choice:hover {
   background:#ffffff52;
 }
 
@@ -1448,7 +1457,7 @@ select:focus-visible,
     font-size:11px;
   }
 
-  .project-rail button {
+  .project-rail .project-choice {
     padding-left:14px;
   }
 
@@ -1456,7 +1465,7 @@ select:focus-visible,
     right:10px;
   }
 
-  .project-rail button>span:first-child {
+  .project-rail .project-choice>span:first-child {
     font-size:7px;
   }
 
@@ -1552,12 +1561,12 @@ select:focus-visible,
     scroll-snap-type:x mandatory;
   }
 
-  .project-rail button {
+  .project-rail .project-choice {
     scroll-snap-align:start;
     padding-left:16px;
   }
 
-  .project-rail button:first-child {
+  .project-rail .project-choice:first-child {
     padding-left:16px;
   }
 
@@ -1565,7 +1574,7 @@ select:focus-visible,
     font-size:12px;
   }
 
-  .project-rail button>span:first-child {
+  .project-rail .project-choice>span:first-child {
     font-size:8px;
   }
 
@@ -1803,7 +1812,7 @@ select:focus-visible,
     grid-template-columns:repeat(4,175px);
   }
 
-  .project-rail button {
+  .project-rail .project-choice {
     min-height:85px;
     padding-top:18px;
     padding-bottom:20px;
@@ -2209,7 +2218,7 @@ select:focus-visible,
   grid-template-columns:repeat(5,minmax(0,1fr));
 }
 
-.project-rail button {
+.project-rail .project-choice {
   min-height:114px;
   padding-right:28px;
 }
@@ -2231,7 +2240,7 @@ select:focus-visible,
     grid-template-columns:repeat(5,210px);
   }
 
-  .project-rail button {
+  .project-rail .project-choice {
     padding-left:16px;
   }
 }
@@ -2251,7 +2260,7 @@ select:focus-visible,
     grid-template-columns:repeat(5,200px);
   }
 
-  .project-rail button {
+  .project-rail .project-choice {
     min-height:111px;
   }
 
