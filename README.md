@@ -33,7 +33,7 @@ The production preview runs at `http://127.0.0.1:4174`.
 | Internship workflow text | `src/data/internships.ts` |
 | Full-time case studies, tracker, public projects, education/timeline | `src/data/content.ts` |
 | Internship introduction and media captions | `src/components/InternshipSection.astro` |
-| Research introduction and recovery demonstration | `src/components/RecoveryLab.astro`, `src/scripts/recovery.js` |
+| Unpublished recovery demonstration, retained for possible future work | `src/components/RecoveryLab.astro`, `src/scripts/recovery.js` |
 | Visual styling | `src/styles/site.css`, `src/styles/about.css`, `src/styles/recovery.css` |
 | Images and other public files | `public/` |
 
@@ -59,7 +59,7 @@ For a custom domain later, update `site` in `astro.config.mjs`, `siteUrl` in `sr
 
 ## Content and references
 
-Professional work is described through conceptual workflows. The recovery lab runs deterministic synthetic examples, and the real-model evaluation project remains in research and design. The internship tracker remains in progress.
+Professional work is described through conceptual workflows. Visual Odometry Lab has a working RGB-D pipeline with ongoing feature development; recovery remains experimental. The internship tracker remains in progress. Agent recovery lab is not active work and is not published on the site. Its component and synthetic examples are retained for possible future use.
 
 Published research images and public tool demonstrations are explicitly attributed. See [THIRD_PARTY.md](THIRD_PARTY.md) for their sources and the copied FiftyOne license.
 

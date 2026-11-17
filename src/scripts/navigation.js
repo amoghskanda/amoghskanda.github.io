@@ -14,7 +14,6 @@ const commands = [
   ['Currently working on', '#building', 'Section'],
   ['Visual Odometry Lab · RGB-D · OpenCV · MuJoCo', '#visual-odometry', 'Building now'],
   ['Internship tracker', '#internship-tracker', 'Side project'],
-  ['Agent recovery lab', '#lab', 'Building now'],
   ['Public projects & publication', '#public-work', 'Source'],
   ['Background & education', '#background', 'About'],
   ['Email Amogh', emailHref, 'Contact'],
@@ -43,7 +42,7 @@ export function initNavigation(dialog) {
     if (!links.length) {
       const message = document.createElement('p');
       message.className = 'command-empty';
-      message.textContent = 'No matching section. Try work, lab, or contact.';
+      message.textContent = 'No matching section. Try work, projects, or contact.';
       results.append(message);
     }
   }
