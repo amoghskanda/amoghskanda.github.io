@@ -837,6 +837,16 @@ select:focus-visible,
   border-radius:50%;
 }
 
+.building-projects {
+  display:grid;
+  gap:50px;
+}
+
+.building-projects>.tracker-feature+.tracker-feature {
+  border-top:1px solid var(--line);
+  padding-top:45px;
+}
+
 .tracker-feature {
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -862,6 +872,10 @@ select:focus-visible,
 .tracker-feature .small-note {
   font-size:9px;
   max-width:350px;
+}
+
+.tracker-feature .text-link {
+  margin-top:18px;
 }
 
 .tracker-pipeline {

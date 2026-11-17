@@ -103,7 +103,31 @@ export const trackerProject = {
   ]
 };
 
+export const visualOdometryProject = {
+  title: 'Visual Odometry Lab',
+  summary: 'A working RGB-D visual odometry lab for testing how camera motion estimates drift when images blur, frames drop, or the view goes dark.',
+  implementation: 'Python, OpenCV, and MuJoCo power repeatable indoor simulations. Baseline, checked, and experimental recovery estimators run on the same observations, with pose error, tracking coverage, and offline trajectory replays for comparison.',
+  status: 'Working implementation · Active feature development. Recovery is experimental and can still accept incorrect motion estimates.',
+  tags: ['Python', 'OpenCV', 'MuJoCo', 'RGB-D odometry'],
+  url: 'https://github.com/amoghskanda/drone-vo-lab',
+  linkLabel: 'Explore the source & results',
+  stages: [
+    ['Simulate camera motion', 'Repeatable RGB-D recordings and ground truth'],
+    ['Degrade observations', 'Motion blur, dropped frames, and blackouts'],
+    ['Estimate movement', 'Baseline, checked, and experimental recovery VO'],
+    ['Evaluate + replay', 'Pose error, tracking coverage, and trajectories'],
+  ],
+};
+
 export const publicWork = [
+  {
+    category: 'Computer vision · Active development',
+    title: visualOdometryProject.title,
+    summary: 'An RGB-D visual odometry testbed built with Python, OpenCV, and MuJoCo. Compares motion estimation and recovery under controlled camera failures against simulator ground truth.',
+    note: 'Working pipeline with recorded benchmarks and offline trajectory replays. Feature development continues; recovery remains experimental. Evaluated in simulation.',
+    url: visualOdometryProject.url,
+    linkLabel: visualOdometryProject.linkLabel,
+  },
   {
     "category": "Team-built project",
     "title": "Kafka-inspired messaging system",
